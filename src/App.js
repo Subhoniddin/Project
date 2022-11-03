@@ -1,8 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
-
+import UserTable from "./components/userTable";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
-  return <div className="color-red">Hello</div>;
+  return (
+    <div className="container">
+      <Router>
+        <Routes>
+          <Route path="/user" element={<UserTable />} />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
